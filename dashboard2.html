@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <title>Merd|Cert</title>
+  </head>
+  <body class="h-100">
+   <!-- Begin -->
+
+     <div class="container-fluid" id="wrapper"> 
+         
+      <div class="row dashboard">
+          <aside class="menu-sidebar col-xs-12 col-sm-3 col-lg-2 px-0 position-fixed shadow" style="height:100vh;">
+            <div class="logo d-flex flex-row align-items-center">
+                <a href="#"><img src="img/merdcerttwo.png" width="200px" height="auto" alt=""></a>
+            </div>
+
+            <ul class="nav sidemenu">
+                <li class="nav-item w-100">
+                  <a href="#" class="nav-link sidemenu-title">Navigation</a>
+                </li>
+
+                <li class="nav-item w-100 active">
+                    <a href="#" class="nav-link sidemenulink">
+                       <span><img src="img/dashboard.svg"  class="iconst" alt="dashboardicon"></span>
+                      <span class="menutitle">Dashboard</span>
+                      <i class="fas fa-angle-right float-right"></i>
+                    </a>
+                </li>
+
+                <!--  -->
+                <li class="nav-item w-100">
+                   
+                  <a  class="nav-link sidemenulink" href="#req-basic" data-toggle="collapse" aria-expanded="false" aria-controls="req-basic">
+                    <span><img src="img/request.svg" class="iconst"  alt="dashboardicon"></span>
+                      <span class="menutitle">Request
+                      </span>
+                      <span class="menutitle badge badge-req">10+</span> 
+                      <i class="fas fa-angle-right float-right js-rotate-if-collapsed"></i>
+                    </a>
+                    <div class="collapse" id="req-basic">
+                        <ul class="nav flex-column submenu">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-angle-right icon"></i>
+                                All Request</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-angle-right icon"></i>
+                                Initiate Request</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-angle-right icon"></i>
+                                Register New Patient</a>
+                          </li>
+                        </ul>
+                      </div>
+                </li>
+
+                <!--  -->
+
+                <li class="nav-item w-100">
+                   
+                    <a  class="nav-link sidemenulink" href="#pay-basic" data-toggle="collapse" aria-expanded="false" aria-controls="pay-basic">
+                      <span><img src="img/payment.svg" class="iconst" alt="dashboardicon"></span>
+                        <span class="menutitle">Payment
+                        </span>
+                        <span class="menutitle badge badge-pay">new</span> 
+                        <i class="fas fa-angle-right float-right js-rotate-if-collapsed"></i>
+                      </a>
+                      <div class="collapse" id="pay-basic">
+                          <ul class="nav flex-column submenu">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <i class="fas fa-angle-right icon"></i>
+                                Patient</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <i class="fas fa-angle-right icon"></i>
+                                New Request</a>
+                            </li>
+                          </ul>
+                        </div>
+                  </li>
+                  <!--  -->
+                  <li class="nav-item w-100">
+                      <a href="#" class="nav-link sidemenulink">
+                        <span><img src="img/usermanage.svg" class="iconst" alt="dashboardicon"></span>
+                        <span class="menutitle">User Management</span>
+                      
+                      </a>
+                  </li>
+                  <!--  -->
+                  <li class="nav-item w-100">
+                      <a href="#" class="nav-link sidemenulink">
+                        <span><img src="img/sign.svg" class="iconst" alt="dashboardicon"></span>
+                        <span class="menutitle">E-Signatures</span>
+                      </a>
+                  </li>
+                  <!--  -->
+                  <li class="nav-item w-100">
+                      <a href="#" class="nav-link sidemenulink">
+                        <span><img src="img/set.svg" class="iconst" alt="dashboardicon"></span>
+                        <span class="menutitle">police</span>
+                      </a>
+                  </li>
+            </ul>
+          </aside>
+
+          <!-- end of side bar -->
+
+          <main class="main col-lg-10 col-sm-9 col-md-9 col-xs-12 offset-lg-2 offset-md-3 px-0">
+            <header class="main-head sticky-top">
+                  <div class="container">
+                    <nav class="d-flex justify-content-between align-content-stretch pageclr">
+                       <ul class="nav d-flex align-content-stretch nav-pan">
+                            <!-- <div class="navbar-toggle d-inline">
+                                    <button type="button" class="navbar-toggler pageclr" id="spin">
+                                        <span class="navbar-toggle-bar bar1"></span>
+                                        <span class="navbar-toggle-bar bar2"></span>
+                                        <span class="navbar-toggle-bar bar3"></span>
+                                      </button>
+                                </div> -->
+                                <li class="nav-item d-flex under">
+                                    <a href="" class="nav-link align-self-center pl-0 pb-0"> <span><img src="img/dashboardic.png" width="24px" height="24px" style="margin-right:1.35rem"  alt="requestpage_icon"></span>DASHBOARD</a>
+                                  </li>
+                       </ul>
+                       <ul class="nav d-flex align-content-stretch nav-pan">
+                          <div class="navbar-toggle d-inline">
+                            <button type="button" class="navbar-toggler pageclr" id="spin">
+                                <span class="navbar-toggle-bar bar1"></span>
+                                <span class="navbar-toggle-bar bar2"></span>
+                                <span class="navbar-toggle-bar bar3"></span>
+                              </button>
+                        </div>
+
+                        <li class="nav-item d-flex align-content-stretch mx-2">
+                          <a href="" class="align-self-center mic"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bullhorn"></i><span><div class="rednote"></div></span></a>
+                          <ul class="dropdown-menu dropdown-menu-right px-2 shadow mt-2 notify">
+                            <li>
+                              <div class="d-flex flex-row justify-content-between" style="height:18px;">
+                                <p>APP NOTIFICATION</p>
+                                <a href="" class="badge badge-note">VIEW ALL</a>
+                              </div>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                              <li>
+                                <a href="#" class="top-text-block">
+                                  <div class="top-text-heading">You have <b>3 new themes</b> trending</div>
+                                  <div class="top-text-light">15 minutes ago</div>
+                                </a> 
+                              </li>
+                              <li class="dropdown-divider"></li>
+                              <li>
+                                <a href="#" class="top-text-block">
+                                  <div class="top-text-heading">New asset recommendations in <b>Gaming Laptop</b></div>
+                                  <div class="top-text-light">2 hours ago</div>
+                                </a> 
+                              </li>
+                              <li class="dropdown-divider"></li>
+                              <li>
+                                <a href="#" class="top-text-block">
+                                  <div class="top-text-heading">New asset recommendations in <b>5 themes</b></div>
+                                  <div class="top-text-light">4 hours ago</div>
+                                </a> 
+                              </li>
+                              <li class="dropdown-divider"></li>
+                              <li>
+                                <a href="#" class="top-text-block">
+                                  <div class="top-text-heading">Assets specifications modified in themes</div>
+                                  <div class="top-text-light">4 hours ago</div>
+                                </a> 
+                              </li>
+                             
+                            </ul>
+                        </li>
+
+                        <li class="nav-item d-flex drop-down">
+                          <a href="#" id="logout-basic" class="nav-link align-self-center dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Adewale Jr</a>
+                          <ul class="dropdown-menu border-0 shadow" aria-labelledby="logout-basic">
+                              <li class="dropdown-item"> <a href="#" class="nav-link"><i class="fas fa-headset pr-2 text-success"></i>Admin support</a></li>
+                              <li class="dropdown-divider"></li>
+                              <li class="dropdown-item"><a href="#" class="nav-link"><i class="fas fa-sign-out-alt pr-2 text-danger"></i>Logout</a></li>
+                          </ul>
+                        </li>
+                         </ul>
+                       
+                      
+                    </nav>
+                  </div>
+            </header>
+            <div class="container dash">
+                <div class="row">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <img src="img/requestpack.png" class="card-img-absolute" alt="circle-image"/>
+                          <h4 class="font-weight-normal mb-3">Requests
+                              <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                          </h4>
+                          <h2 class="dashinfo">4,700</h2>
+                          <h6 class="card-text float-right"> <span><img src="img/down.png" alt=""></span>6%</h6>
+                        </div>
+                        <div class="card-footer grad1 text-white">
+                            <div class="d-flex justify-content-between">
+                              <p class="fl">Last 30 days</p>
+                              <a href="#" class="fr">View more</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-body">
+                            <img src="img/requestpack.png" class="card-img-absolute" alt="circle-image"/>                 
+                          <h4 class="font-weight-normal mb-3">Reports Generated
+                              <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                          </h4>
+                          <h2 class="dashinfo">4,408</h2>
+                          <h6 class="card-text float-right"><span><img src="img/up.png" alt=""></span>10%</h6>
+                        </div>
+                        <div class="card-footer grad2 text-white">
+                            <div class="d-flex justify-content-between">
+                              <p class="fl">Last 30 days</p>
+                              <a href="#" class="fr">View more</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-body">
+                            <img src="img/requestpack.png" class="card-img-absolute" alt="circle-image"/>                                  
+                          <h4 class="font-weight-normal mb-3">Revenue Generated
+                              <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                          </h4>
+                          <h2 class="dashinfo">24,000,741</h2>
+                          <h6 class="card-text float-right"><span><img src="img/up.png" alt=""></span>31%</h6>
+                        </div>
+                        <div class="card-footer grad3 text-white">
+                            <div class="d-flex justify-content-between">
+                              <p class="fl">Last 30 days</p>
+                              <a href="#" class="fr">View more</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                          <div class="card-body">
+                              <img src="img/requestpack.png" class="card-img-absolute" alt="circle-image"/>                                  
+                            <h4 class="font-weight-normal mb-3">Avrg. Request Compl. Time
+                                <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                            </h4>
+                            <h2 class="dashinfo">48 hours </h2>
+                            <h6 class="card-text float-right"><span><img src="img/down.png" alt=""></span>4hrs</h6>
+                          </div>
+                          <div class="card-footer grad4 text-white">
+                              <div class="d-flex justify-content-between">
+                                <p class="fl">Last 30 days</p>
+                                <a href="#" class="fr">View more</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- graoh -->
+                  <div class="row mt-4">
+                    <div class="col-sm-4">
+                      <div class="card">
+                          <div class="card-header bg-white">
+                              <div class="d-flex justify-content-between">
+                                  <div class="title">
+                                    <h6 class="mb-1 revmonth">Revenue by Report Type</h6>
+                                    <p class="mb-0 repmonth">August, 2018</p>
+                                  </div>
+                                  <i class="material-icons float-right btn" id="dropdownMenulist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenulist" style="height:200px;overflow:scroll;">
+                                                    
+                                      <a class="dropdown-item" href="#">Jan</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Feb</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Mar</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Apr</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">May</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Jun</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Jul</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Aug</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Sep</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Oct</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Nov</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Dec</a>
+
+                                       
+                                     </div>
+                              </div>
+                            </div>
+                            <!-- card-body -->
+                            <div class="card-body p-0">
+                                <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <table class="table table-striped table-bordered mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">REPORT TYPE</th>
+                                            <th scope="col">AMOUNT (₦)</th>
+                                            <th scope="col">TREND</th>
+                                           
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">   <a class="nav-link p-0" id="v-pills-fit-tab" data-toggle="pill" href="#v-pills-fit" role="tab" aria-controls="v-pills-fit" aria-selected="true">Medical Report 
+                                                of Fitness</a> </th>
+                                            <td class="bold">250,000</td>
+                                            <td class="green">+12%</td>
+                                           
+                                          </tr>
+                                          <tr>
+                                            <th scope="row"> <a class="nav-link p-0" id="v-pills-death-tab" data-toggle="pill" href="#v-pills-death" role="tab" aria-controls="v-pills-death" aria-selected="false">Death Certificate</a></th>
+                                            <td class="bold">35,000</td>
+                                            <td class="green">+5%</td>
+                                           
+                                          </tr>
+                                          <tr>
+                                            <th scope="row"> <a class="nav-link p-0" id="v-pills-birth-tab" data-toggle="pill" href="#v-pills-birth" role="tab" aria-controls="v-pills-birth" aria-selected="false">Notification of 
+                                                Birth Certificate</a></th>
+                                            <td class="bold">600,000</td>
+                                            <td class="green">+21%</td>
+                                          
+                                          </tr>
+                                          <tr>
+                                              <th scope="row">
+                                                  <a class="nav-link p-0" id="v-pills-police-tab" data-toggle="pill" href="#v-pills-police" role="tab" aria-controls="v-pills-police" aria-selected="false">Police Report</a></th>
+                                              <td class="bold">32,000</td>
+                                              <td class="red">-7%</td>
+                                            
+                                            </tr>
+                                        </tbody>
+                                      </table>
+                                  </div>
+                      
+                            </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-fit" role="tabpanel" aria-labelledby="v-pills-fit-tab">
+                              <div class="card">
+                                <div class="card-header bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="title">
+                                          <h6 class="mb-1 revmonth">Revenue Generated Monthly for <span> <i> Medical Report of Fitness</i> </span></h6>
+                                          <p class="mb-0 repmonth">2018</p>
+                                        </div>
+                                        <i class="material-icons float-right btn" id="dropdownMenulisttwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenulisttwo" style="height:150px;overflow:scroll;">
+                                            <a class="dropdown-item" href="#">2017</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">2018</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">2019</a>
+                                      <div class="dropdown-divider"></div>
+                                          </div>
+                                      </div>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <canvas id="myChart" width="auto" height="150px"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-death" role="tabpanel" aria-labelledby="v-pills-death-tab">
+                                <div class="card">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="title">
+                                              <h6 class="mb-1 revmonth">Revenue Generated Monthly for <span> <i> Death Certificate</i> </span></h6>
+                                              <p class="mb-0 repmonth">2018</p>
+                                            </div>
+                                            <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body bg-light">
+                                        <canvas id="myCharttwo" width="auto" height="150px"></canvas>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-birth" role="tabpanel" aria-labelledby="v-pills-birth-tab">
+                                <div class="card">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="title">
+                                              <h6 class="mb-1 revmonth">Revenue Generated Monthly for <span> <i> Notification of 
+                                                  Birth Certificate</i> </span></h6>
+                                              <p class="mb-0 repmonth">2018</p>
+                                            </div>
+                                            <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body bg-light">
+                                        <canvas id="myChartthree" width="auto" height="150px"></canvas>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-police" role="tabpanel" aria-labelledby="v-pills-police-tab">
+                                <div class="card">
+                                    <div class="card-header bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="title">
+                                              <h6 class="mb-1 revmonth">Revenue Generated Monthly for <span> <i> Police Report</i> </span></h6>
+                                              <p class="mb-0 repmonth">2018</p>
+                                            </div>
+                                            <i class="material-icons float-right" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more_vert</i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body bg-light">
+                                        <canvas id="myChartfour" width="auto" height="150px"></canvas>
+                                    </div>
+                                  </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+          </main>
+      </div>
+     </div>
+
+
+
+<!--  -->
+
+
+<!--  -->
+
+
+
+    <!-- Boostrap Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $('#v-pills-death a').on('click', function (e) {
+        ('#v-pills-death').toggleClass('show,active');
+})
+    </script>
+   
+          
+<script>
+    new Chart(document.getElementById("myChart"), {
+    type: 'bar',
+    
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [
+        {
+          label: "Revenue for this month",
+          backgroundColor: ["#1fb987", "#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#263544","#1fb987","#1fb987","#1fb987","#1fb987"],
+          data: [300000, 500000, 1000000 , 1500000, 2000000, 2500000, 2800000,2200000,1300000,900000,300000,270000]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Month in 2018'
+      }, scales: {
+        yAxes: [{
+					ticks: {
+						beginAtZero:true,
+						userCallback: function(value, index, values) {
+							// Convert the number to a string and splite the string every 3 charaters from the end
+							value = value.toString();
+							value = value.split(/(?=(?:...)*$)/);
+							value = value.join(',');
+							return value;
+						}
+					}
+				}]
+          ,xAxes: [ { gridLines: { display: false } } ], yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Amount(₦)'
+      }
+    }]
+        }
+    }
+});
+    </script>
+<script>
+    new Chart(document.getElementById("myCharttwo"), {
+    type: 'bar',
+    
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [
+        {
+          label: "Revenue for this month",
+          backgroundColor: ["#1fb987", "#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#263544","#1fb987","#1fb987","#1fb987","#1fb987"],
+          data: [300000, 500000, 1000000 , 1500000, 2000000, 2500000, 2800000,2200000,1300000,900000,300000,270000]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Month in 2018'
+      }, scales: {
+        yAxes: [{
+					ticks: {
+						beginAtZero:true,
+						userCallback: function(value, index, values) {
+							// Convert the number to a string and splite the string every 3 charaters from the end
+							value = value.toString();
+							value = value.split(/(?=(?:...)*$)/);
+							value = value.join(',');
+							return value;
+						}
+					}
+				}]
+          ,xAxes: [ { gridLines: { display: false } } ], yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Amount(₦)'
+      }
+    }]
+        }
+    }
+});
+    </script>
+        <script>
+            new Chart(document.getElementById("myChartthree"), {
+            type: 'bar',
+            
+            data: {
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+              datasets: [
+                {
+                  label: "Revenue for this month",
+                  backgroundColor: ["#1fb987", "#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#263544","#1fb987","#1fb987","#1fb987","#1fb987"],
+                  data: [30000, 500000, 1000000 , 1500000, 2000000, 2500000, 2800000,2200000,1300000,900000,300000,270000]
+                }
+              ]
+            },
+            options: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: 'Month in 2018'
+              }, scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero:true,
+                    userCallback: function(value, index, values) {
+                      // Convert the number to a string and splite the string every 3 charaters from the end
+                      value = value.toString();
+                      value = value.split(/(?=(?:...)*$)/);
+                      value = value.join(',');
+                      return value;
+                    }
+                  }
+                }]
+                  ,xAxes: [ { gridLines: { display: false } } ], yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Amount(₦)'
+              }
+            }]
+                }
+            }
+        });
+            </script>
+            <script>
+                new Chart(document.getElementById("myChartfour"), {
+                type: 'bar',
+                
+                data: {
+                  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                  datasets: [
+                    {
+                      label: "Revenue for this month",
+                      backgroundColor: ["#1fb987", "#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#1fb987","#263544","#1fb987","#1fb987","#1fb987","#1fb987"],
+                      data: [30000, 500000, 1000000 , 1500000, 2000000, 2500000, 2800000,2200000,1300000,900000,300000,270000]
+                    }
+                  ]
+                },
+                options: {
+                  legend: { display: false },
+                  title: {
+                    display: true,
+                    text: 'Month in 2018'
+                  }, scales: {
+                    yAxes: [{
+                      ticks: {
+                        beginAtZero:true,
+                        userCallback: function(value, index, values) {
+                          // Convert the number to a string and splite the string every 3 charaters from the end
+                          value = value.toString();
+                          value = value.split(/(?=(?:...)*$)/);
+                          value = value.join(',');
+                          return value;
+                        }
+                      }
+                    }]
+                      ,xAxes: [ { gridLines: { display: false } } ], yAxes: [{
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Amount(₦)'
+                  }
+                }]
+                    }
+                }
+            });
+                </script>
+  </body>
+</html>

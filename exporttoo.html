@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Export</title>
+    <style>
+    #wrapper{
+        padding:2rem;
+    }
+    div.float{
+           display:flex;
+           justify-content: space-between;
+       }
+    h3.center{
+        text-align: center;
+    }
+    table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th{
+            background-color: #4FAF61;
+            color:white;
+            font-size: 14px;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-size: 15px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }    </style>
+</head>
+<body>
+    <div id="wrapper">
+            <div class="float">
+                    <img src="img/lasuthlogo.png" class="headlogo" alt="">
+                    <h4 class="printdate">Printed 06/12/2018</h4>
+            </div>
+           
+            <h3 class="center">PAYMENT REQUEST</h3>
+            <table>
+                    <tr>
+                        <th>S/N</th>
+                      <th>REQUEST NO</th>
+                      <th>DOCUMENT PAID FOR</th>
+                      <th>PATIENT</th>
+                      <th>AMOUNT</th>
+                      <th>STATUS</th>
+                      <th>UPDATED BY</th>
+                    </tr>
+                    <tr>
+                      <td>  1</td>
+                      <td>     19112018-108418-76</td>
+                      <td>  Police Report</td>
+                      <td>  Dr. coyle Rauf</td>
+                      <td>   10,000.00</td>
+                      <td> Pending Payment</td>
+                      <td>19 Nov 2018</td>
+                    </tr>
+                    <tr>
+                            <td>  2</td>
+                            <td>     19112018-108418-76</td>
+                            <td>  Police Report</td>
+                            <td>  Dr. coyle Rauf</td>
+                            <td>   10,000.00</td>
+                            <td> Pending Payment</td>
+                            <td>19 Nov 2018</td>
+                          </tr>
+                          <tr>
+                                <td>  3</td>
+                                <td>     19112018-108418-76</td>
+                                <td>  Police Report</td>
+                                <td>  Dr. coyle Rauf</td>
+                                <td>   10,000.00</td>
+                                <td> Pending Payment</td>
+                                <td>19 Nov 2018</td>
+                              </tr>
+                
+                  </table>
+
+                  <a href="#" style="margin-top:1rem;">https://medcert.com.ng/request/preview/</a>
+    </div>
+
+    <button onclick="myFunction()">Print this page</button>
+
+
+<script>
+   function myFunction() {
+    window.print();
+}</script>
+</body>
+</html>
